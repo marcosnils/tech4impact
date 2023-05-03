@@ -3,7 +3,7 @@ const { Pool } = require('pg')
 describe("Integration Tests", () => {
   test("Database operation", async () => {
     const pool = new Pool({
-      connectionString: process.env.DB_CONNETION_STRING,
+      connectionString: process.env.DB_CONNECTION_STRING,
       port: 5432,
     })
 

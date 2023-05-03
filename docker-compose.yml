@@ -13,7 +13,7 @@ services:
       context: .
       target: test
     environment:
-      DB_CONNETION_STRING: postgres://postgres:example_password@db:5432/example_db
+      DB_CONNECTION_STRING: postgres://postgres:example_password@db:5432/example_db
     depends_on:
       - db
 volumes:
