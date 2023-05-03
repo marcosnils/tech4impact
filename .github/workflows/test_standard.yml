@@ -9,5 +9,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v3
     - name: Run tests
-      run: docker-compose up app
+      run: docker compose up app
