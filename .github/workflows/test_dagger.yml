@@ -12,4 +12,5 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
+    - run: npm install --only=dev
     - run: node build.js
