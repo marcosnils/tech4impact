@@ -16,4 +16,4 @@ jobs:
     - name: Build image
       run: docker build -t ttl.sh/tech4impact-standard:1h .
     - name: Push image
-      run: push ttl.sh/tech4impact-standard:1h
+      run: docker push ttl.sh/tech4impact-standard:1h
