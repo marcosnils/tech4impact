@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example_password
+      POSTGRES_DB: example_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  app:
+    build:
+      context: .
+      target: test
+    environment:
+      DB_CONNETION_STRING: postgres://postgres:example_password@db:5432/example_db
+    depends_on:
+      - db
+volumes:
+  postgres-data:
